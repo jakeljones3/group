@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Purchases</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+    <h1>User Purchases</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Transaction ID</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Transaction Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% transactions.forEach(transaction => { %>
+                <tr>
+                    <td><%= transaction.transaction_id %></td>
+                    <td><%= transaction.amount %></td>
+                    <td><%= transaction.transaction_type %></td>
+                    <td><%= transaction.category %></td>
+                    <td><%= transaction.description %></td>
+                    <td><%= transaction.transaction_date %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>

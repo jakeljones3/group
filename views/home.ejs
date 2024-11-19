@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+    <h1>Welcome, <%= user.username %>!</h1>
+    <p>Username: <%= user.username %></p>
+    <form action="/balance/<%= user.user_id %>" method="GET">
+        <button type="submit">Check Balance</button>
+    </form>
+    <form action="/transactions/1" method="GET">
+        <button type="submit">Transactions</button>
+    </form>
+</body>
+</html>
